@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.minibanners {
+  display: flex;
+  cursor: pointer;
+  max-height: 600px;
+  width: 100%;
+  font-family: "inter";
+}
+.leftbanners {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.widesquare {
+  display: flex;
+  align-items: center;
+  height: 320px;
+  width: 720px;
+}
+.widesquare > h1 {
+  font-weight: 400;
+  font-size: 49px;
+}
+.widesquare > .info {
+  display: flex;
+  flex-direction: column;
+}
+.widesquare > .info > .widesquaredesc {
+  font-weight: 300;
+  font-size: 14px;
+  color: #909090;
+}
+
+.widesquare > img {
+  height: 323px;
+  width: 360px;
+}
+.squarescontainer {
+  height: 272px;
+  max-width: 720px;
+  display: flex;
+}
+.squarescontainer > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 50%;
+}
+.square1 {
+  padding-right: 48px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  height: 48px;
+  width: 160px;
+}
+.info > h1 {
+  font-weight: 200;
+  font-size: 29px;
+}
+.info > h1 > span {
+  font-weight: 500;
+}
+.desc {
+  color: #909090;
+  font-size: 14px;
+  line-height: 19px;
+}
+.square2 {
+  position: relative;
+  overflow: hidden;
+}
+.square2 > .info > .desc {
+  color: #909090;
+  font-size: 14px;
+  line-height: 19px;
+}
+.square2 > img{
+  position: absolute;
+  left: -180px;
+}
+.square2 > .info{
+  position: absolute;
+  right: 35px;
+}
+
+.largebanner {
+  display: flex;
+  align-items: center;
+  padding: 45px 44px;
+  padding-right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ededed;
+  justify-content: space-between;
+}
+.largebanner > img{
+  height: 502px;
+}
+.largebanner > .info {
+  width: 360px;
+}
+.largebanner > .info > h1 {
+  font-weight: 200;
+  line-height: 56px;
+  letter-spacing: 0;
+  font-size: 64px;
+}
+.largebanner > .info > span {
+  font-weight: 700;
+}
+@media screen and (max-width:760px) {
+  .minibanners {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    height: 1696.44px;
+    width: 100%;
+    font-family: "inter";
+  }
+  .leftabanners {
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+  .squarescontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .squarescontainer > img{
+    margin: 0 auto;
+  }
+  .squarescontainer > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 376px;
+  }
+  .square1 {
+    padding-right: 0;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+  .info > h1 {
+    text-align: right;
+    margin: 0 auto;
+    font-size: 34px;
+    font-weight: 200;
+  }
+  .info > h1 > span {
+    font-weight: 500;
+  }
+  .desc {
+    text-align: center;
+    color: #909090;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .square2 {
+    position: static;
+    overflow: hidden;
+  }
+  .square2 > .info > .desc {
+    color: #909090;
+    font-size: 14px;
+    line-height: 0;
+  }
+  .square2 > img{
+    position: static;
+  }
+  .square2 > .info{
+    position: static;
+    right: 35px;
+  }
+  .widesquare {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 320px;
+    width: 100%;
+    margin-top: 500px;
+  }
+  .widesquare > img{
+    height: 200px;
+    width: 200px;
+  }
+  .widesquare > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+  }
+  .widesquare > div > h1 {  
+    display: inline;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 34px;
+  }
+  .widesquare > div > h1 > span{
+    font-weight: 500;
+  }
+  .widesquare > div >.info {
+    display: flex;
+    flex-direction: column;
+  }
+  .widesquare > div > .widesquaredesc {
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+    color: #909090;
+  }
+  
+  .widesquare > img {
+    height: 323px;
+    width: 360px;
+  }
+
+  .largebanner {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 98px 16px;
+    width: 100%;
+    height: 504px;
+    background-color: #ededed;
+  }
+  .largebanner > img{
+    height: 300px;
+  }
+  .largebanner > .info {
+    display: flex;
+    flex-direction: column;
+    margin-top:50px;
+    width: 100%;
+  }
+  .largebanner > .info > h1 {
+    width: 100%;
+    text-align: center;
+    font-weight: 200;
+    line-height: 56px;
+    letter-spacing: 0;
+    font-size: 34px;
+  }
+  .largebanner > .info > span {
+    font-weight: 700;
+  }
+}

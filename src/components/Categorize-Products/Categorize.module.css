@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.categorizer {
+  width: 100%;
+  height: 352px;
+  font-family: "Inter";
+  padding: 80px 160px;
+  background-color: #fafafa;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  height: 100%;
+  width: 100%;
+}
+.toggler {
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: -1.5px;
+  font-size: 24px;
+  align-items: center;
+  width: 100%;
+  height: 32px;
+}
+.categories {
+  display: flex;
+  gap: 32px;
+  height: 128px;
+  width: 100%;
+}
+.category {
+  display: flex;
+  cursor: pointer;
+  gap: 5px;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 400;
+  letter-spacing: -1px;
+  justify-content: center;
+  text-align: center;
+  background-color: #ededed;
+  width: 9.5vw;
+  height: 100%;
+  border-radius: 15px;
+}
+@media screen and (max-width: 760px) {
+  .categorizer {
+    margin-top: 1146px;
+    width: 100%;
+    height: 624px;
+    font-family: "Inter";
+    padding: 64px 16px;
+    background-color: #fafafa;
+  }
+  .content {
+    gap: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+  }
+  .toggler {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 32px;
+  }
+  .toggler > h3 {
+    letter-spacing: -1px;
+    font-weight: 500;
+    font-size: 24px;
+  }
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    height: 416px;
+    max-width: 343px;
+  }
+  .category {
+    display: flex;
+    cursor: pointer;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+    letter-spacing: -1px;
+    justify-content: center;
+    text-align: center;
+    background-color: #ededed;
+    width: 163px;
+    height: 128px;
+    border-radius: 15px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .categories{
+    width: 100%;
+    justify-content: center;
+  }
+  .category{
+    width: 40vw;
+  }
+}

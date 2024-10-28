@@ -1,0 +1,69 @@
+.card{
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    gap: 10px;
+    flex-direction: column;
+    width: 237px;
+    height: 432px;
+    margin-bottom: 32px;
+    padding: 20px;
+    background-color: #F6F6F6;
+}
+.top{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+.likeicon{
+    height: 32px;
+    width: 32px;
+}
+.productdetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.producttitle{
+    font-size: 16px;
+    color: black;
+    letter-spacing: -0.6px;
+}
+.price{
+    letter-spacing: -1px;
+    color: black;
+    font-weight: 600;
+    font-size: 24px;
+}
+@media screen and (max-width:760px) {
+    .card{
+        padding: 20px 10px;
+            font-size: 14px;
+            width: 163px;
+    }
+    .productdetails{
+        gap: 10px;
+    }
+    .price{
+
+    }
+    .productdetails > button {
+        padding: 12px 38px;
+        font-size: 14px;
+        width: 139px;
+    }
+}
+@media screen and (max-width: 370px) {
+    .productimage{
+        width: 130px;
+    }
+    .card{
+        padding: 10px;
+        height: 387px;
+        width: 150px;
+    }
+}

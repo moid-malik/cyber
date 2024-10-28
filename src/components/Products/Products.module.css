@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+.products{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter';
+    color: #8B8B8B;
+    gap: 32px;
+    padding: 56px 160px;
+    width: 100%;
+}
+.productsnavigation{
+    display: flex;
+    font-weight: 500;
+    letter-spacing: -1.1px;
+    font-size: 18px;
+    gap: 32px;
+    align-items: center;
+    width: 100%;
+}
+.productsnavigation > a{
+    display: flex;
+    gap: 2px;
+}
+.selected {
+    border-bottom: 2px solid black;
+    color: black;
+}
+.productscards{
+    display: flex;
+    justify-content:space-between ;
+    width: auto;
+    flex-wrap: wrap;
+    column-gap: 16px;
+}
+@media screen and (max-width:760px) {
+    .products{
+        justify-content: space-between;
+        width: 100%;
+        height: 1632px;
+        padding: 56px 16px;
+    }
+    .productsnavigation{
+        font-weight: 500;
+        font-size: 16px;
+        width: 100%;
+    }
+    .productscards{
+        width: 100%;
+        flex-wrap: wrap;
+        column-gap: 16px;
+    }
+}
+@media screen and (max-width: 370px) {
+    .products{
+        padding:-10px  22px;
+    }
+}

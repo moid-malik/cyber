@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.banner {
+  position: relative;
+  cursor: pointer;
+  font-family: "Inter";
+  height: auto;
+  height: 448px;
+  width: 100%;
+  color: white;
+  background-image: url(/Banner2.png);
+}
+.bannerimage {
+  width: 100%;
+}
+.content {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100%;
+  width: 100%;
+}
+.title {
+  font-weight: 100;
+  font-size: 72px;
+}
+.title > span {
+  font-weight: 500;
+}
+.subtitle {
+  font-weight: 400;
+  color: #787878;
+  font-size: 16px;
+}
+@media screen and (max-width: 760px) {
+  .banner {
+    margin-bottom: -901px;
+    height: 512px;
+    width: 100%;
+    background-image: url(/mobilebannerbottom.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
