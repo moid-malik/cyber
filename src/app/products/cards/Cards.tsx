@@ -3,20 +3,29 @@ import { useState, useEffect } from "react";
 import { products } from "@/data/productsData";
 import styles from "./Cards.module.css";
 
+interface Product {
+  producttitle: string;
+  subtitle: string;
+  price: number;
+  imagesource: string;
+  liked: boolean;
+}
+
 interface CardsProps {
   query: string | null;
 }
-let allProducts = products.allProducts
+
+const allProducts: Product[] = products.allProducts;
 
 const Cards = ({ query }: CardsProps) => {
-  const [filteredProducts, setFilteredProducts] = useState(allProducts);
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>(allProducts);
 
   useEffect(() => {
     const filterProducts = () => {
       if (!query) {
         setFilteredProducts(allProducts);
       } else {
-        const filtered = allProducts.filter((product: any) =>
+        const filtered = allProducts.filter((product) =>
           product.producttitle.toLowerCase().includes(query.toLowerCase())
         );
         setFilteredProducts(filtered);
@@ -26,7 +35,7 @@ const Cards = ({ query }: CardsProps) => {
   }, [query]);
 
   const toggleLike = (index: number) => {
-    const updatedProducts = filteredProducts.map((product: any, i: any) => {
+    const updatedProducts = filteredProducts.map((product, i) => {
       if (i === index) {
         return { ...product, liked: !product.liked };
       }
@@ -38,7 +47,7 @@ const Cards = ({ query }: CardsProps) => {
   return (
     <>
       {filteredProducts.length > 0 ? (
-        filteredProducts.map((product: any, index: any) => (
+        filteredProducts.map((product, index) => (
           <div key={product.producttitle} className={styles.card}>
             <div className={styles.top}>
               <svg

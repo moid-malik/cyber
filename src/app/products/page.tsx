@@ -1,4 +1,4 @@
-'use client'; // Ensure this is at the top
+'use client';
 import styles from './page.module.css';
 import Cards from './cards/Cards';
 import { useSearchParams } from 'next/navigation';
@@ -6,7 +6,7 @@ import React, { Suspense } from 'react';
 
 const PageContent = () => {
   const searchParams = useSearchParams();
-  const query = searchParams.get('query') || ''; // Default to an empty string if not found
+  const query = searchParams.get('query') || '';
 
   return (
     <>
