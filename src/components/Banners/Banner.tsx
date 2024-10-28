@@ -1,6 +1,8 @@
+import Link from "next/link";
 import styles from "./Banners.module.css";
 import MiniBanners from "./Mini-Banners/MiniBanners";
 import { banners } from "@/data/productsData";
+
 const Banners = () => {
   return (
     <>
@@ -11,9 +13,10 @@ const Banners = () => {
           {banners.mainBanner[0].title.split(" ")[0]} <span>{banners.mainBanner[0].title.split(" ")[1]}</span>
           </h1>
           <h6>{banners.mainBanner[0].description}</h6>
-          <button 
+          <Link 
+          href={`products/mainbanner`}
           style={{"borderColor": "white", "color":"white","maxWidth":"191px"}}
-          className="button-outline">Shop Now</button>
+          className="button-outline">Shop Now</Link>
         </div>
         <div className={styles.bannerimage}>
           <img src={banners.mainBanner[0].image} alt="" />

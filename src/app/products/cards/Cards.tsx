@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { products } from "@/data/productsData";
 import styles from "./Cards.module.css";
+import Link from "next/link";
 
 interface Product {
   producttitle: string;
@@ -94,12 +95,13 @@ const Cards = ({ query }: CardsProps) => {
                 </span>
               </h5>
               <div className={styles.price}>${product.price}</div>
-              <button
+              <Link
+              href={`products/${product.producttitle}/${index}`}
                 style={{ position: "absolute", bottom: "25px" }}
                 className="button-filled"
               >
                 Buy Now
-              </button>
+              </Link>
             </div>
           </div>
         ))

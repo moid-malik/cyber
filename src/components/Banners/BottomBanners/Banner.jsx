@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Banner.module.css";
 
 const BottomBanner = () => {
@@ -10,12 +11,13 @@ const BottomBanner = () => {
         <div className={styles.subtitle}>
           Commodo fames vitae vitae leo mauris in. Eu consequat.
         </div>
-        <button
+        <Link
+        href={`/products`}
           style={{ borderColor: "white", color: "white", marginTop: "4rem" }}
           className="button-outline"
         >
           Shop now
-        </button>
+        </Link>
       </div>
     </div>
   );
