@@ -11,7 +11,7 @@ const PageContent = () => {
   return (
     <>
       <div className={styles.indicator}>
-        <p>Showing results for: <strong>{query}</strong></p>
+        {query.length > 0 && <p>Showing results for: <strong>{query}</strong></p>}
       </div>
       <div className={styles.container}>
         <div className={styles.productscards}>

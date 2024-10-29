@@ -27,7 +27,7 @@
 }
 .productscards{
     display: flex;
-    justify-content:space-between ;
+    justify-content:start;
     width: auto;
     flex-wrap: wrap;
     column-gap: 16px;

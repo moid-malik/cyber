@@ -1,7 +1,8 @@
 import Banner from "./VerticalBanner/Banner";
 import styles from "./VerticalBanners.module.css";
-import data from "./data";
+import { banners } from "@/data/productsData";
 const VerticalBanners = () => {
+  const data = banners.verticalBanners
   return (
     <>
     <div className={styles.verticalbanners}>

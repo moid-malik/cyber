@@ -28,6 +28,6 @@ const categories = [
     {
       icon: <Gaming />,
       category: 'Gaming',
-    },
+    }
   ];
 export default categories;

@@ -2,6 +2,7 @@
 import styles from "./Cards.module.css";
 import { useState, useEffect } from "react";
 import { products } from "@/data/productsData";
+import Link from "next/link";
 
 const ProductList = ({ tab }) => {
   const [Products, setProducts] = useState([]);
@@ -20,7 +21,10 @@ const ProductList = ({ tab }) => {
   return (
     <>
       {Products.map((product, index) => (
-        <div key={index} className={styles.card}>
+        <div
+         key={index}
+         className={styles.card}
+         >
           <div className={styles.top}>
             <svg
               className={styles.like}
@@ -65,12 +69,13 @@ const ProductList = ({ tab }) => {
               </span>
             </h5>
             <div className={styles.price}>${product.price}</div>
-            <button
+            <Link
+            href={`/products/${product.id}`}
               style={{ position: "absolute", bottom: "25px" }}
               className="button-filled"
             >
               Buy Now
-            </button>
+            </Link>
           </div>
         </div>
       ))}

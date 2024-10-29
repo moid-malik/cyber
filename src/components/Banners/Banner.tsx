@@ -14,7 +14,7 @@ const Banners = () => {
           </h1>
           <h6>{banners.mainBanner[0].description}</h6>
           <Link 
-          href={`products/mainbanner`}
+          href={`products/${banners.mainBanner[0].id}`}
           style={{"borderColor": "white", "color":"white","maxWidth":"191px"}}
           className="button-outline">Shop Now</Link>
         </div>

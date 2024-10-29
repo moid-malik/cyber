@@ -2,6 +2,7 @@
 import styles from "./Card.module.css";
 import { useState } from "react";
 import { products } from "@/data/productsData";
+import Link from "next/link";
 
 const ProductList = () => {
   const  [Products, setProducts] = useState(products || []);
@@ -54,9 +55,9 @@ const ProductList = () => {
               </span>
             </h5>
             <div className={styles.price}>${product.price}</div>
-            <button style={{ position: "absolute", bottom: "25px" }} className="button-filled">
+            <Link href={`products/${product.id}`} style={{ position: "absolute", bottom: "25px" }} className="button-filled">
               Buy Now
-            </button>
+            </Link>
           </div>
         </div>
       ))}

@@ -1,6 +1,7 @@
 const banners = {
   mainBanner: [
     {
+      id: "main-banner-1",
       title: `IPhone14 Pro`,
       description: "Created to change everything for the better For everyone.",
       image: "/iphoneimage.png",
@@ -10,6 +11,7 @@ const banners = {
   miniBanners: {
     leftBannerOne: [
       {
+        id: "mini-banner-left-1",
         image: "/Products/playstation.png",
         title: "PlayStation 5",
         description:
@@ -18,6 +20,7 @@ const banners = {
     ],
     leftBannerTwo: [
       {
+        id: "mini-banner-left-2",
         image: "/Products/airpodsmax.png",
         title: "Apple Airpods MAX",
         description: "Computational audio. Listen, its powerful",
@@ -25,6 +28,7 @@ const banners = {
     ],
     leftBannerThree: [
       {
+        id: "mini-banner-left-3",
         image: "/Products/visionpro.png",
         title: "Apple Vision Pro",
         description: "An immersive way to experience entertainment",
@@ -32,6 +36,7 @@ const banners = {
     ],
     rightBanner: [
       {
+        id: "mini-banner-right-1",
         image: "/Products/macbook.png",
         title: "Macbook Air",
         description:
@@ -42,6 +47,7 @@ const banners = {
     verticalBanners: {
       verticalBannerOne: [
         {
+          id: "vertical-banner-1",
           bgcolor: "#F9F9F9",
           imagesource: "/Products/ipadpro.png",
           title: "I Pad Pro",
@@ -51,6 +57,7 @@ const banners = {
       ],
       verticalBannerTwo: [
         {
+          id: "vertical-banner-2",
           bgcolor: "#EAEAEA",
           imagesource: "/Products/samsunggalaxy.png",
           title: "Samsung Galaxy",
@@ -60,6 +67,7 @@ const banners = {
       ],
       verticalBannerThree: [
         {
+          id: "vertical-banner-3",
           bgcolor: "#2C2C2C",
           imagesource: "/Products/macbookpro.png",
           title: "Macbook Pro",
@@ -69,11 +77,46 @@ const banners = {
       ],
     },
   },
+   verticalBanners : [
+    {
+      id: "verticalBannerOne",
+      bgcolor: "#F9F9F9",
+      imagesource: "/Products/ipadpro.png",
+      title: "I Pad Pro",
+      description:
+        "iPad Pro combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
+    },
+    {
+      id: "verticalBannerTwo",
+      bgcolor: "#EAEAEA",
+      imagesource: "/Products/samsunggalaxy.png",
+      title: "Samsung Galaxy",
+      description:
+        "Galaxy Fold 5 combines a stunning foldable display, impressive performance, multitasking features, and premium design.",
+    },
+    {
+      id: "verticalBannerThree",
+      bgcolor: "#2C2C2C",
+      imagesource: "/Products/macbookpro.png",
+      title: "Macbook Pro",
+      description:
+        "MacBook Pro combines a brilliant Retina display, powerful performance, advanced graphics, and long-lasting battery life.",
+    },
+    {
+      id: "verticalBannerFour",
+      bgcolor: "black",
+      imagesource: "/Products/visionpro.png",
+      title: "Vision Pro",
+      description:
+        "Vision Pro features a stunning immersive display, powerful performance, advanced controls, and effortless usability.",
+    },
+  ]  
 };
 
 const products = {
   newArrival: [
     {
+      id: "product-new-1",
       liked: true,
       imagesource: "/Products/Iphone14pro.png",
       producttitle: "Apple iPhone 14 Pro Max",
@@ -81,6 +124,7 @@ const products = {
       price: 900,
     },
     {
+      id: "product-new-2",
       liked: true,
       imagesource: "/Products/airpodsmax.png",
       producttitle: "Apple AirPods Max",
@@ -88,6 +132,7 @@ const products = {
       price: 549,
     },
     {
+      id: "product-new-3",
       liked: false,
       imagesource: "/Products/AppleIPad.png",
       producttitle: "Apple iPad 9th Generation",
@@ -95,6 +140,7 @@ const products = {
       price: 329,
     },
     {
+      id: "product-new-4",
       liked: false,
       imagesource: "/Products/BlackMagicCamera.png",
       producttitle: "Blackmagic Pocket Cinema Camera 6K",
@@ -102,6 +148,7 @@ const products = {
       price: 1995,
     },
     {
+      id: "product-new-5",
       liked: true,
       imagesource: "/Products/GalaxyBuds.png",
       producttitle: "Samsung Galaxy Buds FE",
@@ -109,6 +156,7 @@ const products = {
       price: 99,
     },
     {
+      id: "product-new-6",
       liked: false,
       imagesource: "/Products/GalaxyWatch.png",
       producttitle: "Samsung Galaxy Watch 6",
@@ -116,6 +164,7 @@ const products = {
       price: 299,
     },
     {
+      id: "product-new-7",
       liked: false,
       imagesource: "/Products/ZFold.png",
       producttitle: "Samsung Galaxy Z Fold 5",
@@ -125,6 +174,7 @@ const products = {
   ],
   bestSeller: [
     {
+      id: "product-best-1",
       liked: true,
       imagesource: "/Products/GalaxyWatch.png",
       producttitle: "Samsung Galaxy Watch 6",
@@ -132,6 +182,7 @@ const products = {
       price: 900,
     },
     {
+      id: "product-best-2",
       liked: false,
       imagesource: "/Products/applewatch9.png",
       producttitle: "Apple Watch 9",
@@ -139,6 +190,7 @@ const products = {
       price: 549,
     },
     {
+      id: "product-best-3",
       liked: true,
       imagesource: "/Products/airpodsmax.png",
       producttitle: "Airpods Max",
@@ -146,6 +198,7 @@ const products = {
       price: 329,
     },
     {
+      id: "product-best-4",
       liked: false,
       imagesource: "/Products/goldeniphone.png",
       producttitle: "IPhone 14 Pro",
@@ -153,6 +206,7 @@ const products = {
       price: 1995,
     },
     {
+      id: "product-best-5",
       liked: true,
       imagesource: "/Products/AppleIPad.png",
       producttitle: "IPad - A tablet by Apple inc.",
@@ -162,6 +216,7 @@ const products = {
   ],
   featuredProducts: [
     {
+      id: "product-featured-1",
       liked: false,
       imagesource: "/Products/BlackMagicCamera.png",
       producttitle: "Black Magic Camera",
@@ -169,6 +224,7 @@ const products = {
       price: 900,
     },
     {
+      id: "product-featured-2",
       liked: true,
       imagesource: "/Products/Iphone14pro.png",
       producttitle: "I Phone 14 Pro",
@@ -176,6 +232,7 @@ const products = {
       price: 549,
     },
     {
+      id: "product-featured-3",
       liked: true,
       imagesource: "/Products/GalaxyBuds.png",
       producttitle: "Galaxy Buds",
@@ -183,6 +240,7 @@ const products = {
       price: 329,
     },
     {
+      id: "product-featured-4",
       liked: true,
       imagesource: "/Products/ZFold.png",
       producttitle: "Galazy Z Fold 5",
@@ -190,6 +248,7 @@ const products = {
       price: 1995,
     },
     {
+      id: "product-featured-5",
       liked: false,
       imagesource: "/Products/spacegrayiphone.png",
       producttitle: "IPhone 14 Pro",
@@ -199,6 +258,7 @@ const products = {
   ],
   discountedProducts: [
     {
+      id: "product-discounted-1",
       liked: true,
       imagesource: "/Products/goldeniphone.png",
       producttitle: "Apple iPhone 14 Pro Max",
@@ -206,6 +266,7 @@ const products = {
       price: 900,
     },
     {
+      id: "product-discounted-2",
       liked: true,
       imagesource: "/Products/airpodsmax.png",
       producttitle: "Apple AirPods Max",
@@ -213,6 +274,7 @@ const products = {
       price: 549,
     },
     {
+      id: "product-discounted-3",
       liked: false,
       imagesource: "/Products/AppleIPad.png",
       producttitle: "Apple iPad 9th Generation",
@@ -220,6 +282,7 @@ const products = {
       price: 329,
     },
     {
+      id: "product-discounted-4",
       liked: false,
       imagesource: "/Products/BlackMagicCamera.png",
       producttitle: "Blackmagic Pocket Cinema Camera 6K",
@@ -227,6 +290,7 @@ const products = {
       price: 1995,
     },
     {
+      id: "product-discounted-5",
       liked: false,
       imagesource: "/Products/spacegrayiphone.png",
       producttitle: "I Phone 14 Pro",
@@ -240,6 +304,7 @@ const products = {
     producttitle: string;
     subtitle: string;
     price: number;
+    id: string;
   }[],
 };
 
@@ -253,7 +318,5 @@ Object.values(products).forEach((category) => {
     }
   });
 });
-
-
 
 export { banners, products };

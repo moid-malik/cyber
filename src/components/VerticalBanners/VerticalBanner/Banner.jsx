@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Banner.module.css";
 function Banner({ data }) {
   return (
@@ -21,11 +22,12 @@ function Banner({ data }) {
          className={styles.description}>{elem.description}
         </div>
       </div>
-        <button 
+        <Link 
+        href={`products/${elem.id}`}
         style={
           index > 1 ? {"borderColor":"white", "color":"white"} : {}
         }
-        className="button-outline">Shop Now</button>
+        className="button-outline">Shop Now</Link>
         
     </div>
     ))}

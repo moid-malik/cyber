@@ -9,7 +9,7 @@ const MiniBanners = () => {
   return (
     <div className={styles.minibanners}>
       <div className={styles.leftabanners}>
-        <div onClick={()=> router.push('/products/minibannerone')} className={styles.widesquare}>
+        <div onClick={()=> router.push(`/products/${banners.miniBanners.leftBannerOne[0].id}`)} className={styles.widesquare}>
           <img src={banners.miniBanners.leftBannerOne[0].image} alt="Wide Banner" />
           <div>
             <h1>{banners.miniBanners.leftBannerOne[0].title}</h1>
@@ -20,7 +20,7 @@ const MiniBanners = () => {
         </div>
 
         <div className={styles.squarescontainer}>
-          <div onClick={()=> router.push('/products/minibannertwo')} style={{ backgroundColor: "#EDEDED" }} className={styles.square1}>
+          <div onClick={()=> router.push(`/products/${banners.miniBanners.leftBannerTwo[0].id}`)} style={{ backgroundColor: "#EDEDED" }} className={styles.square1}>
             <img src={banners.miniBanners.leftBannerTwo[0].image} alt="" />
             <div className={styles.info}>
               <h1>
@@ -34,7 +34,8 @@ const MiniBanners = () => {
             </div>
           </div>
 
-          <div onClick={()=> router.push('/products/minibannerthree')} style={{ backgroundColor: "#353535", color: "white" }} className={styles.square2}>
+          <div 
+          onClick={()=> router.push(`/products/${banners.miniBanners.leftBannerThree[0].id}`)} style={{ backgroundColor: "#353535", color: "white" }} className={styles.square2}>
             <img src={banners.miniBanners.leftBannerThree[0].image} alt="" />
             <div className={styles.info}>
               <h1>
@@ -57,7 +58,7 @@ const MiniBanners = () => {
           <p className={styles.desc}>
             {banners.miniBanners.rightBanner[0]?.description}
           </p>
-          <Link href={`/products/minibannerfour`} className={"button-outline"}>{banners.miniBanners.rightBanner[0]?.buttonLabel || "Shop now"}</Link>
+          <Link href={`/products/${banners.miniBanners.leftBannerTwo[0].id}`} className={"button-outline"}>{banners.miniBanners.rightBanner[0]?.buttonLabel || "Shop now"}</Link>
         </div>
         <img src={banners.miniBanners.rightBanner[0].image} alt="" />
       </div>
