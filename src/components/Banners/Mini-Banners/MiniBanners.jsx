@@ -1,6 +1,6 @@
 "use client";
 import styles from "./MiniBanners.module.css";
-import { allProducts } from "@/data/productsData"; // Assuming the products array now contains banner information
+import { allProducts } from "@/data/productsData";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 

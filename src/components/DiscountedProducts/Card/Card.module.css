@@ -19,6 +19,9 @@
     height: 32px;
     width: 32px;
 }
+.productimage{
+    object-fit: contain;
+}
 .productdetails{
     display: flex;
     flex-direction: column;

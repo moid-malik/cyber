@@ -49,7 +49,6 @@ const Cards = ({ query }: CardsProps) => {
     <>
       {filteredProducts.length > 0 ? (
         filteredProducts.map((product) => {
-          // Get the original index from allProducts
           const originalIndex = allProducts.findIndex(
             (p) => p.id === product.id
           );
