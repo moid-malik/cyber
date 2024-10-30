@@ -1,14 +1,3 @@
-type Product = {
-  id: string;
-  liked: boolean;
-  imagesource: string;
-  producttitle: string;
-  subtitle: string;
-  price: number;
-  description: string;
-  beforeDiscountPrice?: number,
-  variants: Array<{ [key: string]: string }>;
-};
 
 const allProducts = [
   {
