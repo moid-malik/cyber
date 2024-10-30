@@ -1,11 +1,11 @@
 "use client";
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
 import { allProducts } from "@/data/productsData";
 import { useSearchParams } from "next/navigation";
 
-const Page = () => {
+const PageContent = () => {
   const [selectedVariant, setSelectedVariant] = useState(1);
   const params = useSearchParams();
   const index = params.get("productnumber");
@@ -141,6 +141,13 @@ const Page = () => {
         </div>
       </div>
     </div>
+  );
+};
+const Page = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PageContent />
+    </Suspense>
   );
 };
 

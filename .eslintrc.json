@@ -3,6 +3,7 @@
   "rules": {
     "no-unused-vars": "off",
     "no-console": "off",
-    "react/jsx-key": "off"
+    "react/jsx-key": "off",
+    "react/react-in-jsx-scope": "off"
   }
 }
