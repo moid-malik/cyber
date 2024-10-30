@@ -1,30 +1,27 @@
-"use client";
 import styles from "./Cards.module.css";
 import { useState, useEffect } from "react";
-import { products } from "@/data/productsData";
+import { allProducts } from "@/data/productsData";
 import Link from "next/link";
 
 const ProductList = ({ tab }) => {
-  const [Products, setProducts] = useState([]);
+  const [Products, setProducts] = useState(allProducts);
+
   useEffect(() => {
     if (tab === "newarrival") {
-      setProducts(products.newArrival);
+      setProducts(allProducts.filter((product) => product.id.includes("new")));
     } else if (tab === "bestSeller") {
-      setProducts(products.bestSeller);
+      setProducts(allProducts.filter((product) => product.id.includes("best")));
     } else if (tab === "featuredProducts") {
-      setProducts(products.featuredProducts);
+      setProducts(allProducts.filter((product) => product.id.includes("featured")));
     } else {
-      setProducts([]);
+      setProducts(allProducts);
     }
   }, [tab]);
 
   return (
     <>
       {Products.map((product, index) => (
-        <div
-         key={index}
-         className={styles.card}
-         >
+        <div key={index} className={styles.card}>
           <div className={styles.top}>
             <svg
               className={styles.like}
@@ -70,7 +67,7 @@ const ProductList = ({ tab }) => {
             </h5>
             <div className={styles.price}>${product.price}</div>
             <Link
-            href={`/products/${product.id}`}
+              href={`/products/details?productnumber=${index}`}
               style={{ position: "absolute", bottom: "25px" }}
               className="button-filled"
             >

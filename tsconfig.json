@@ -4,7 +4,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/Banners/BottomBanners/Banner.jsx", "src/components/Banners/Mini-Banners/MiniBanners.jsx", "src/components/Categorize-Products/Categorize.jsx", "src/components/DiscountedProducts/DiscountedProducts.jsx", "src/components/DiscountedProducts/Card/Card.jsx", "src/components/Footer/Footer.jsx", "src/components/Header/Header.jsx", "src/components/Header/Subnav/Subnav.jsx", "src/components/VerticalBanners/VerticalBanner/Banner.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/Banners/BottomBanners/Banner.jsx", "src/components/Banners/Mini-Banners/MiniBanners.jsx", "src/components/Categorize-Products/Categorize.jsx", "src/components/DiscountedProducts/DiscountedProducts.jsx", "src/components/DiscountedProducts/Card/Card.jsx", "src/components/Footer/Footer.jsx", "src/components/Header/Header.jsx", "src/components/Header/Subnav/Subnav.jsx", "src/components/VerticalBanners/VerticalBanner/Banner.jsx", "src/data/productsData.ts"],
   "exclude": ["node_modules"]
 }

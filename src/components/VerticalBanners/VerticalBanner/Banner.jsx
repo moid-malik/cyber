@@ -23,7 +23,7 @@ function Banner({ data }) {
         </div>
       </div>
         <Link 
-        href={`products/${elem.id}`}
+        href={`products/details?productnumber${index}`}
         style={
           index > 1 ? {"borderColor":"white", "color":"white"} : {}
         }

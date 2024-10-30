@@ -55,13 +55,13 @@ const Header = () => {
             <Link href="/" className={pathname === "/" ? styles.selectedlink : ""}>
               Home
             </Link>
-            <Link href="/about" className={pathname === "/about" ? styles.selectedlink : ""}>
+            <Link onClick={()=> alert("just a front-end project, gonna add backend stuff like user-auth, databases later if needed in further projects") } href="" className={pathname === "/about" ? styles.selectedlink : ""}>
               About
             </Link>
-            <Link href="/contact" className={pathname === "/contact" ? styles.selectedlink : ""}>
+            <Link onClick={()=> alert("just a front-end project, gonna add backend stuff like user-auth, databases later if needed in further projects") } href="" className={pathname === "/contact" ? styles.selectedlink : ""}>
               Contact Us
             </Link>
-            <Link href="/blog" className={pathname === "/blog" ? styles.selectedlink : ""}>
+            <Link onClick={()=> alert("just a front-end project, gonna add backend stuff like user-auth, databases later if needed in further projects") } href="" className={pathname === "/blog" ? styles.selectedlink : ""}>
               Blog
             </Link>
           </div>
@@ -98,13 +98,13 @@ const Header = () => {
           <Link href="/" onClick={() => setShowNav(false)} className={pathname === "/" ? styles.selectedphonenavlink : ""}>
             Home
           </Link>
-          <Link href="/about" onClick={() => setShowNav(false)} className={pathname === "/about" ? styles.selectedphonenavlink : ""}>
+          <Link   href="" onClick={() => { alert("gonna impliment the backend stuff later if needed in further assignments"); setShowNav(false)}} className={pathname === "/about" ? styles.selectedphonenavlink : ""}>
             About
           </Link>
-          <Link href="/contact" onClick={() => setShowNav(false)} className={pathname === "/contact" ? styles.selectedphonenavlink : ""}>
+          <Link   href="" onClick={() => { alert("gonna impliment the backend stuff later if needed in further assignments"); setShowNav(false)}} className={pathname === "/contact" ? styles.selectedphonenavlink : ""}>
             Contact Us
           </Link>
-          <Link href="/blog" onClick={() => setShowNav(false)} className={pathname === "/blog" ? styles.selectedphonenavlink : ""}>
+          <Link   href="" onClick={() => { alert("gonna impliment the backend stuff later if needed in further assignments"); setShowNav(false)}} className={pathname === "/blog" ? styles.selectedphonenavlink : ""}>
             Blog
           </Link>
         </div>

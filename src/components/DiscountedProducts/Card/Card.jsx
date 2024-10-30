@@ -1,23 +1,32 @@
 "use client";
 import styles from "./Card.module.css";
 import { useState } from "react";
-import { products } from "@/data/productsData";
+import { allProducts } from "@/data/productsData";
 import Link from "next/link";
 
 const ProductList = () => {
-  const  [Products, setProducts] = useState(products || []);
+  const [Products, setProducts] = useState(allProducts || []);
+
+  const toggleLike = (index) => {
+    setProducts((prevProducts) => {
+      const updatedProducts = [...prevProducts];
+      updatedProducts[index] = {
+        ...updatedProducts[index],
+        liked: !updatedProducts[index].liked,
+      };
+      return updatedProducts;
+    });
+  };
+  const displayLimit = 5;
 
   return (
     <>
-      {Products.discountedProducts.map((product, index) => (
+      {Products.slice(0, displayLimit).map((product, index) => (
         <div key={index} className={styles.card}>
           <div className={styles.top}>
             <svg
               className={styles.like}
-            onClick={() => {
-              product.liked = !product.liked;
-              setProducts([...Products]);
-            }}
+              onClick={() => toggleLike(index)}
               width="32"
               height="32"
               viewBox="0 0 32 32"
@@ -33,7 +42,11 @@ const ProductList = () => {
             </svg>
           </div>
           <div
-            style={{ width: "100%", display: "flex", justifyContent: "center" }}
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+            }}
             className="imagewrapper"
           >
             <img
@@ -44,9 +57,9 @@ const ProductList = () => {
           </div>
           <div style={{ width: "100%" }} className={styles.productdetails}>
             <h5 style={{ fontWeight: "300" }} className={styles.producttitle}>
-            {product.producttitle.length > 29
-                  ? `${product.producttitle.slice(0, 27)}...`
-                  : product.producttitle}
+              {product.producttitle.length > 29
+                ? `${product.producttitle.slice(0, 27)}...`
+                : product.producttitle}
               <br />
               <span className={styles.subtitle}>
                 {product.subtitle.length > 49
@@ -55,7 +68,11 @@ const ProductList = () => {
               </span>
             </h5>
             <div className={styles.price}>${product.price}</div>
-            <Link href={`products/${product.id}`} style={{ position: "absolute", bottom: "25px" }} className="button-filled">
+            <Link
+              href={`/products/details?productnumber=${index}`}
+              style={{ position: "absolute", bottom: "25px" }}
+              className="button-filled"
+            >
               Buy Now
             </Link>
           </div>

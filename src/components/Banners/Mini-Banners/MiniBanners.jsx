@@ -1,66 +1,100 @@
-'use client'
+"use client";
 import styles from "./MiniBanners.module.css";
-import { banners } from "@/data/productsData";
+import { allProducts } from "@/data/productsData"; // Assuming the products array now contains banner information
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const MiniBanners = () => {
   const router = useRouter();
+
+  const [leftBannerOne, leftBannerTwo, leftBannerThree, rightBanner] =
+    allProducts.slice(0, 4);
+
   return (
     <div className={styles.minibanners}>
-      <div className={styles.leftabanners}>
-        <div onClick={()=> router.push(`/products/${banners.miniBanners.leftBannerOne[0].id}`)} className={styles.widesquare}>
-          <img src={banners.miniBanners.leftBannerOne[0].image} alt="Wide Banner" />
+      <div className={styles.leftbanners}>
+        <div
+          onClick={() =>
+            router.push(`/products/details?productnumber=0`)
+          }
+          className={styles.widesquare}
+        >
+          <img
+            src={leftBannerOne.imagesource}
+            alt={leftBannerOne.producttitle}
+          />
           <div>
-            <h1>{banners.miniBanners.leftBannerOne[0].title}</h1>
-            <p className={styles.widesquaredesc}>
-              {banners.miniBanners.leftBannerOne[0].description}
-            </p>
+            <h1>{leftBannerOne.producttitle}</h1>
+            <p className={styles.widesquaredesc}>{leftBannerOne.description}</p>
           </div>
         </div>
 
         <div className={styles.squarescontainer}>
-          <div onClick={()=> router.push(`/products/${banners.miniBanners.leftBannerTwo[0].id}`)} style={{ backgroundColor: "#EDEDED" }} className={styles.square1}>
-            <img src={banners.miniBanners.leftBannerTwo[0].image} alt="" />
+          <div
+            onClick={() => router.push(`/products/details?productnumber=1`)}
+            style={{ backgroundColor: leftBannerTwo.bgColor || "#EDEDED" }}
+            className={styles.square1}
+          >
+            <img
+              src={leftBannerTwo.imagesource}
+              alt={leftBannerTwo.producttitle}
+            />
             <div className={styles.info}>
               <h1>
-                {banners.miniBanners.leftBannerTwo[0]?.title.split(" ")[0]}{" "}
-                {banners.miniBanners.leftBannerTwo[0]?.title.split(" ")[1]}{" "}
-                <span>{banners.miniBanners.leftBannerTwo[0]?.title.split(" ")[2]}</span>
+                {leftBannerTwo.producttitle.split(" ")[0]}
+                <br />
+                {leftBannerTwo.producttitle.split(" ")[1]}
+                <br />
+                <span>{leftBannerTwo.producttitle.split(" ")[2]}</span>
               </h1>
-              <p className={styles.desc}>
-                {banners.miniBanners.leftBannerTwo[0]?.description}
-              </p>
+              <p className={styles.desc}>{leftBannerTwo.description}</p>
             </div>
           </div>
 
-          <div 
-          onClick={()=> router.push(`/products/${banners.miniBanners.leftBannerThree[0].id}`)} style={{ backgroundColor: "#353535", color: "white" }} className={styles.square2}>
-            <img src={banners.miniBanners.leftBannerThree[0].image} alt="" />
+          <div
+            onClick={() => router.push(`/products/details?productnumber=2`)}
+            style={{
+              backgroundColor: leftBannerThree.bgColor || "#353535",
+              color: "white",
+            }}
+            className={styles.square2}
+          >
+            <img
+              src={leftBannerThree.imagesource}
+              alt={leftBannerThree.producttitle}
+            />
             <div className={styles.info}>
               <h1>
-                {banners.miniBanners.leftBannerThree[0]?.title.split(" ")[0]}{" "}
-                <span>{banners.miniBanners.leftBannerThree[0]?.title.split(" ")[1]}</span>
+                {leftBannerThree.producttitle.split(" ")[0]}
+                <br />
+                {leftBannerThree.producttitle.split(" ")[1]}
+                <br />
+                <span>{leftBannerThree.producttitle.split(" ")[2]}</span>
               </h1>
-              <p className={styles.desc}>
-                {banners.miniBanners.leftBannerThree[0]?.description}
-              </p>
+              <p className={styles.desc}>{leftBannerThree.description}</p>
             </div>
           </div>
         </div>
       </div>
-      <div style={{ backgroundColor: "#EDEDED" }} className={styles.largebanner}>
+
+      <div
+        style={{ backgroundColor: rightBanner.bgColor || "#EDEDED" }}
+        className={styles.largebanner}
+      >
         <div className={styles.info}>
           <h1>
-            {banners.miniBanners.rightBanner[0]?.title.split(" ")[0]}{" "}
-            <span>{banners.miniBanners.rightBanner[0]?.title.split(" ")[1]}</span>
+            {rightBanner.producttitle.split(" ")[0]} <br />{" "}
+            <span>{rightBanner.producttitle.split(" ")[1]}</span>
           </h1>
-          <p className={styles.desc}>
-            {banners.miniBanners.rightBanner[0]?.description}
-          </p>
-          <Link href={`/products/${banners.miniBanners.leftBannerTwo[0].id}`} className={"button-outline"}>{banners.miniBanners.rightBanner[0]?.buttonLabel || "Shop now"}</Link>
+          <p className={styles.desc}>{rightBanner.description}</p>
+          <Link
+            href={`/products/details?productnumber=3`}
+            className={"button-outline"}
+          >
+            {rightBanner.buttonLabel || "Shop now"}
+          </Link>
         </div>
-        <img src={banners.miniBanners.rightBanner[0].image} alt="" />
+        <img src={rightBanner.imagesource} alt={rightBanner.producttitle} />
       </div>
     </div>
   );
