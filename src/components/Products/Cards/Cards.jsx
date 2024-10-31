@@ -4,24 +4,32 @@ import { allProducts } from "@/data/productsData";
 import Link from "next/link";
 
 const ProductList = ({ tab }) => {
-  const [Products, setProducts] = useState(allProducts);
+  const [Products, setProducts] = useState([]);
 
   useEffect(() => {
+    let filteredProducts;
     if (tab === "newarrival") {
-      setProducts(allProducts.filter((product) => product.id.includes("new")));
+      filteredProducts = allProducts
+        .map((product, originalIndex) => ({ product, originalIndex }))
+        .filter(({ product }) => product.id.includes("new"));
     } else if (tab === "bestSeller") {
-      setProducts(allProducts.filter((product) => product.id.includes("best")));
+      filteredProducts = allProducts
+        .map((product, originalIndex) => ({ product, originalIndex }))
+        .filter(({ product }) => product.id.includes("best"));
     } else if (tab === "featuredProducts") {
-      setProducts(allProducts.filter((product) => product.id.includes("featured")));
+      filteredProducts = allProducts
+        .map((product, originalIndex) => ({ product, originalIndex }))
+        .filter(({ product }) => product.id.includes("featured"));
     } else {
-      setProducts(allProducts);
+      filteredProducts = allProducts.map((product, originalIndex) => ({ product, originalIndex }));
     }
+    setProducts(filteredProducts);
   }, [tab]);
 
   return (
     <>
-      {Products.map((product, index) => (
-        <div key={index} className={styles.card}>
+      {Products.map(({ product, originalIndex }) => (
+        <div key={originalIndex} className={styles.card}>
           <div className={styles.top}>
             <svg
               className={styles.like}
@@ -67,7 +75,7 @@ const ProductList = ({ tab }) => {
             </h5>
             <div className={styles.price}>${product.price}</div>
             <Link
-              href={`/products/details?productnumber=${index}`}
+              href={`/products/details?productnumber=${originalIndex}`}
               style={{ position: "absolute", bottom: "25px" }}
               className="button-filled"
             >
